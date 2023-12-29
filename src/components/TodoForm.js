@@ -14,9 +14,9 @@ const TodoForm = ({addTodo}) => {
     }
 
   return (
-    <form className='TodoForm' onSubmit={handleSubmit}>
-        <input type="text" className='todo-input' placeholder='what is today task?' value={value} onChange={(e)=>{setValue(e.target.value)}}/>
-        <button type='submit' className='todo-btn'>Add</button>
+    <form className='TodoForm w-full text-center pb-5' onSubmit={handleSubmit}>
+        <input type="text" className='todo-input py-2 px-2 mr-2 rounded-md w-[500px]' placeholder='what is today task?' value={value} onChange={(e)=>{setValue(e.target.value)}}/>
+        <button type='submit' className='todo-btn py-2 px-5 bg-stone-500 rounded-sm'>Add</button>
     </form>
   )
 }

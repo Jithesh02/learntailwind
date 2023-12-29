@@ -25,13 +25,15 @@ const TodoWrapper = () => {
         }
         
   return (
-    <div className='TodoWrapper'>
+    <div className='flex justify-center w-full px-10'>
+        <div className='w-[600px] flex-col items-center'>
+        <h1 className='pt-10 pb-3 f-20 text-2xl font-bold italic pl-18 text-center w-full'>TODO APP</h1>
         <TodoForm addTodo = {addTodo} />
         {todos.map((todo,index) => (
             todo?.isEditing? <EditTodoForm task={todo} saveEdit={saveEdit} key={todo.id}/>:
             <Todo task={todo} key={index} ToggleCompleted={ToggleCompleted} deleteTodo = {deleteTodo} editTodo={editTodo}/>
         ))}
-        
+        </div>
     </div>
   )
 }
